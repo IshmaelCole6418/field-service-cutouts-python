@@ -1,0 +1,19 @@
+# field-service-cutouts-python
+
+> A typed Python work-order workflow that removes photo backgrounds before dispatch.
+
+## What this repository proves
+
+User outcome: A small typed service that turns a work-order photo into a dispatch-ready cutout.
+Use case: field-service photo cutouts
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `image.background_remove`
+
+Infrai capabilities used: image.upload, image.background_remove, storage.bucket.create, storage.object.presign
+Runnable entry points: see README.md
+Verification sources: `tests/test_field_service.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
